@@ -27,7 +27,7 @@ const Model = (props) => {
             className={classes.canvas}
             style={{ position: 'absolute' }}
             flat
-            pixelRatio={window.devicePixelRatio * 2}>
+            dpr={Math.max(window.devicePixelRatio, 2)}>
             <group dispose={null} onClick={() => { setRotate(false) }} touchStart={() => { setRotate(false) }}>
 
                 <directionalLight intensity={0.5} />
