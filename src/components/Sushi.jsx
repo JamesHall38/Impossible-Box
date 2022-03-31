@@ -56,7 +56,7 @@ const Sushi = () => {
                                 <Card className={classes.cards} >
                                     <i style={{ fontSize: 'min(max(5px, 4vw), 45px)', paddingBottom: '5px' }} className="devicon-materialui-plain colored"></i>
                                     <Typography variant="body2" >
-                                        materialUI
+                                        MUI
                                     </Typography>
                                 </Card>
 
@@ -70,7 +70,7 @@ const Sushi = () => {
                                 <Card className={classes.cards} >
                                     <img src="/commercejs.png" alt="commerjs" style={{ height: 'min(max(5px, 4vw), 45px)' }} />
                                     <Typography variant="body2" >
-                                        commerce.js
+                                        commerce
                                     </Typography>
                                 </Card>
 

@@ -114,7 +114,7 @@ const Contact = () => {
 
                                     </motion.div >
                                 </Grid>
-                                <Grid item xs={12} sm={10}>
+                                <Grid item xs={10} sm={10}>
                                     <motion.div
                                         initial={{ opacity: 0, translateY: 10 }}
                                         animate={{ opacity: 1, translateY: 0 }}
@@ -126,7 +126,7 @@ const Contact = () => {
 
                                     </motion.div >
                                 </Grid>
-                                <Grid item xs={12} sm={2} style={{ display: 'flex', alignItems: 'center', }}>
+                                <Grid item xs={2} sm={2} style={{ display: 'flex', alignItems: 'center', }}>
                                     <motion.div
                                         initial={{ opacity: 0, translateY: 10 }}
                                         animate={{ opacity: 1, translateY: 0 }}
