@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(() => ({
     appbar: {
-        background: 'rgb(32,32,35,1)',
+        background: 'rgb(32,32,35,0.5)',
         backdropFilter: 'blur(10px)',
         boxShadow: 'none',
         display: 'flex',
@@ -97,7 +97,6 @@ export default makeStyles(() => ({
         animationDuration: ' 1.0s',
         animationIterationCount: 'infinite',
         animationTimingFunction: 'linear',
-        background: 'rgb(0,0,0,0)',
     },
     canvas: {
         background: '#BC2020',
