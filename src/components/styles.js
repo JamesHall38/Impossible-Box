@@ -7,8 +7,9 @@ export default makeStyles(() => ({
         boxShadow: 'none',
         display: 'flex',
         alignItems: 'center',
-        top: 'calc(100vh - 60px)',
-        bottom: '0'
+        height: '60px',
+        top: 'calc(100vh - 59px)',
+        // bottom: '0'
     },
     hover: {
         color: 'white',
