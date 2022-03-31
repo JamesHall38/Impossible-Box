@@ -97,6 +97,7 @@ export default makeStyles(() => ({
         animationDuration: ' 1.0s',
         animationIterationCount: 'infinite',
         animationTimingFunction: 'linear',
+        background: 'rgb(0,0,0,0)',
     },
     canvas: {
         background: '#BC2020',
