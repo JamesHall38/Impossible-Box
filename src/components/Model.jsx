@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { default as Controls } from './Controls'
 import { default as Cube } from './Cube'
@@ -10,13 +10,24 @@ const Model = (props) => {
     const [rotate, setRotate] = useState(true)
     const classes = useStyles()
 
+    // For mobile devices
+    useEffect(() => {
+        const handleMouseDown = () => {
+            setRotate(false)
+        }
+        window.addEventListener("touchstart", handleMouseDown);
+        return () => {
+            window.removeEventListener("touchstart", handleMouseDown);
+        }
+    })
+
+
     return (
         <Canvas
             className={classes.canvas}
             style={{ position: 'absolute' }}
-            flat
-            pixelRatio={window.devicePixelRatio}>
-            <group dispose={null} onClick={() => { setRotate(false) }}>
+            flat>
+            <group dispose={null} onClick={() => { setRotate(false) }} touchStart={() => { setRotate(false) }}>
 
                 <directionalLight intensity={0.5} />
                 <ambientLight intensity={0.5} />

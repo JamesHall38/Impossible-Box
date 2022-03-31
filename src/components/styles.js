@@ -14,6 +14,7 @@ export default makeStyles(() => ({
         overflow: 'hidden',
     },
     hover: {
+        textAlign: 'center',
         color: 'white',
         padding: '6px',
         borderRadius: '5px',
