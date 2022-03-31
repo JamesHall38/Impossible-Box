@@ -4,7 +4,7 @@ import { extend } from '@react-three/fiber'
 
 
 const RainMaterial = shaderMaterial(
-    { uTime: 0, uSize: 15 * window.devicePixelRatio },
+    { uTime: 0, uSize: 30 * window.devicePixelRatio },
     // vertex shader
     glsl`
     uniform float uTime;

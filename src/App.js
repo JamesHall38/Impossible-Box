@@ -42,8 +42,15 @@ const theme = createTheme({
   typography: {
     fontFamily: '<M PLUS Rounded 1c>',
     h6: {
-      fontSize: '1.1rem'
+      fontSize: '1rem'
+    },
+    h5: {
+      fontSize: '1.3rem'
+    },
+    body2: {
+      fontSize: '0.75rem'
     }
+
   }
 });
 

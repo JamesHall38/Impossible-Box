@@ -33,50 +33,50 @@ const Sushi = () => {
 
                         <Grid container>
                             <Grid item>
-                                <Typography variant="body1" align='justify'>
+                                <Typography variant="body1" align='justify' style={{ paddingBottom: '20px' }}>
                                     Un site d'e-commmerce qui présente les produits en 3D et utilise l'API de commerce.js pour traîter les commandes.
                                 </Typography>
                             </Grid>
-                            <Grid item style={{ display: 'flex', paddingTop: '10px', width: '100%', justifyContent: 'center', flexWrap: 'wrap' }}>
+                            <Grid item style={{ display: 'flex', paddingTop: '10px', width: '100%' }}>
 
                                 <Card className={classes.cards} >
                                     <i style={{ fontSize: '45px', paddingBottom: '5px' }} className="devicon-react-original colored"></i>
-                                    <Typography variant="body1" >
+                                    <Typography variant="body2" >
                                         React
                                     </Typography>
                                 </Card>
 
                                 <Card className={classes.cards} >
                                     <i style={{ fontSize: '45px', paddingBottom: '5px' }} className="devicon-threejs-original"></i>
-                                    <Typography variant="body1" >
+                                    <Typography variant="body2" >
                                         three.js
                                     </Typography>
                                 </Card>
 
                                 <Card className={classes.cards} >
                                     <i style={{ fontSize: '45px', paddingBottom: '5px' }} className="devicon-materialui-plain colored"></i>
-                                    <Typography variant="body1" >
-                                        material UI
+                                    <Typography variant="body2" >
+                                        materialUI
                                     </Typography>
                                 </Card>
 
                                 <Card className={classes.cards} >
                                     <img src="/stripe.png" alt="stripe" style={{ height: '45px' }} />
-                                    <Typography variant="body1" >
+                                    <Typography variant="body2" >
                                         Stripe
                                     </Typography>
                                 </Card>
 
                                 <Card className={classes.cards} >
                                     <img src="/commercejs.png" alt="commerjs" style={{ height: '45px' }} />
-                                    <Typography variant="body1" >
+                                    <Typography variant="body2" >
                                         commerce.js
                                     </Typography>
                                 </Card>
 
                                 <Card className={classes.cards} >
                                     <img src="/vercel.png" alt="commerjs" style={{ height: '45px' }} />
-                                    <Typography variant="body1" >
+                                    <Typography variant="body2" >
                                         Vercel
                                     </Typography>
                                 </Card>

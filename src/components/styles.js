@@ -82,8 +82,8 @@ export default makeStyles(() => ({
         alignItems: 'center',
         background: 'rgb(32,32,35,0.1)',
         aspectRatio: '1',
-        width: '95px',
-        height: '95px',
+        width: 'min(max(5px, 100%), 95px)',
+        height: ' min(max(5px, 100%), 95px)',
         color: 'white',
     },
     load: {
