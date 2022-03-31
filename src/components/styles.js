@@ -40,7 +40,7 @@ export default makeStyles(() => ({
     },
     sushi: {
         maxWidth: '620px',
-        minHeight: '261px',
+        height: '261px',
         color: 'white',
         background: 'rgb(32,32,35,0.5)',
         backdropFilter: 'blur(10px)',

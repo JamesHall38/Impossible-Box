@@ -18,7 +18,7 @@ const Maze = () => {
                         transition={{ duration: 0.4 }}>
 
                         <Typography variant="h5" className={classes.title}>
-                            The Maze
+                            Maze Generator
                         </Typography>
 
                     </motion.div  >
