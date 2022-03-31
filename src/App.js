@@ -55,7 +55,7 @@ const Main = () => {
   const [path, setPath] = useState('')
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', background: '#BC2020' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', background: '#BC2020', height: '100vh' }}>
       <Navbar setPath={setPath} />
       <CssBaseline />
 

@@ -26,7 +26,7 @@ const Navbar = ({ setPath }) => {
 
     return (
         <>
-            <AppBar position="fixed" className={classes.appbar} >
+            <AppBar className={classes.appbar} >
                 <Toolbar >
                     <IconButton onClick={() => setPath(previousPage)} aria-label="previous" component={Link} to={previousPage} className={classes.hover}>
                         <KeyboardArrowLeft />
