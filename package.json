@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.4",
-    "@testing-library/user-event": "^13.5.0",
+    "@emailjs/browser": "^3.4.0",
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@react-three/drei": "^8.16.7",
+    "@react-three/fiber": "^7.0.26",
+    "framer-motion": "^6.2.8",
+    "passive-events-support": "^1.0.33",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-hook-form": "^7.28.1",
+    "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
-    "web-vitals": "^2.1.4"
+    "three": "^0.138.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "glslify": "^7.1.1"
   }
 }
