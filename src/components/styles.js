@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 export default makeStyles(() => ({
     appbar: {
-        background: 'rgb(32,32,35,0.5)',
+        background: 'rgb(32,32,35,1)',
         backdropFilter: 'blur(10px)',
         boxShadow: 'none',
         display: 'flex',
