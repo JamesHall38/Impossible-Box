@@ -1,4 +1,4 @@
-import { Typography, Card, CardContent, Grid } from '@material-ui/core'
+import { Typography, Card, CardContent, Grid, Link } from '@material-ui/core'
 import useStyles from './styles'
 import { motion } from "framer-motion"
 
@@ -18,7 +18,7 @@ const Maze = () => {
                         transition={{ duration: 0.4 }}>
 
                         <Typography variant="h5" className={classes.title}>
-                            Maze Generator
+                            Maze Solver
                         </Typography>
 
                     </motion.div  >
@@ -43,6 +43,17 @@ const Maze = () => {
 
                     </motion.div  >
                 </CardContent>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ delay: 0.1, duration: 0.4 }}>
+                    <div style={{ width: '100%', top: '10px', padding: '10px', textAlign: 'end', position: 'absolute' }} >
+                        <Link variant='h6' style={{ color: 'white', background: 'rgb(0,0,0,0.1)', padding: '10px', borderRadius: '7%' }} href='https://maze-solver.vercel.app' >
+                            Visiter
+                        </Link>
+                    </div >
+                </motion.div  >
             </Card >
         </div >
     )

@@ -1,4 +1,4 @@
-import { Typography, Card, CardContent } from '@material-ui/core'
+import { Typography, Card, CardContent, Link } from '@material-ui/core'
 import useStyles from './styles'
 import { motion } from "framer-motion"
 
@@ -37,8 +37,12 @@ const Home = () => {
                             James Hall
                         </Typography>
 
-                        <i style={{ fontSize: '25px', paddingLeft: '200px' }} className="devicon-github-original"></i>
-                        <i style={{ fontSize: '25px', paddingLeft: '5px' }} className="devicon-linkedin-plain"></i>
+                        <Link href='https://github.com/JamesHall38/Impossible-Box' style={{ textDecoration: 'none' }}>
+                            <i style={{ fontSize: '25px', paddingLeft: '200px' }} className="devicon-github-original" />
+                        </Link>
+                        <Link href='https://linkedin.com/in/james-hall38' style={{ textDecoration: 'none' }}>
+                            <i style={{ fontSize: '25px', paddingLeft: '5px' }} className="devicon-linkedin-plain" />
+                        </Link>
 
                     </motion.div  >
                 </CardContent>

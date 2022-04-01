@@ -8,7 +8,6 @@ export default makeStyles(() => ({
         display: 'flex',
         alignItems: 'center',
         height: '60px',
-        // top: 'calc(100vh - 60px)',
         top: 'auto',
         bottom: '0',
         overflow: 'hidden',
@@ -125,5 +124,4 @@ export default makeStyles(() => ({
             opacity: '1'
         },
     }
-
 }))
