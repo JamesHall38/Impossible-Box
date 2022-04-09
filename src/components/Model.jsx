@@ -27,7 +27,6 @@ const Model = (props) => {
             className={classes.canvas}
             style={{ position: 'absolute' }}
             flat
-            frameloop="demand"
             dpr={2}>
 
             <group dispose={null} onClick={() => { setRotate(false) }} touchStart={() => { setRotate(false) }}>
