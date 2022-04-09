@@ -3,7 +3,6 @@ import { OrbitControls } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 
 
-
 const Controls = ({ navigate, location, path, rotate }) => {
     const controls = useRef()
 
@@ -33,7 +32,8 @@ const Controls = ({ navigate, location, path, rotate }) => {
         controls.current.autoRotateSpeed *= -1
     }, [])
 
-    useFrame(({ camera }) => {
+
+    useFrame(({ performance, camera }) => {
         controls.current.target.set(0, (Math.sqrt((camera.position.x ** 2) + (camera.position.z ** 2)) - .8) * 0.48 - 0.24, 0)
         const angle = controls.current.getAzimuthalAngle()
         if (angle > Math.PI / 4 && angle < 3 * Math.PI / 4) {
@@ -53,7 +53,10 @@ const Controls = ({ navigate, location, path, rotate }) => {
                 navigate('/')
         }
     })
-    return <OrbitControls ref={controls} />
+    return (<>
+        <OrbitControls ref={controls} />
+    </>
+    )
 }
 
 export default Controls

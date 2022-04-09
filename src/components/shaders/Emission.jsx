@@ -58,7 +58,7 @@ const Emission = ({ node, face }) => {
         vertexShader
     }
 
-    return <shaderMaterial {...data} />
+    return <shaderMaterial {...data} precision='lowp' />
 }
 
 export default Emission

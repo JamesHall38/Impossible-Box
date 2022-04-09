@@ -80,7 +80,7 @@ const BoxContent = ({ face, faceName, nodes, screen }) => {
                 if (node.name.includes(faceName))
                     return (
                         <mesh key={index} geometry={node.geometry} >
-                            <shaderMaterial {...data} />
+                            <shaderMaterial {...data} precision='lowp' />
                         </mesh>)
             return (null)
         }))
