@@ -1,5 +1,5 @@
 import { Typography, Card, CardContent, Link } from '@material-ui/core'
-import useStyles from './styles'
+import useStyles from '../styles'
 import { motion } from "framer-motion"
 
 

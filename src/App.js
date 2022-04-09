@@ -19,11 +19,11 @@ passiveSupport({
 })
 
 
-const Model = lazy(() => import('./components/Model'))
-const Maze = lazy(() => import('./components/Maze'))
-const Contact = lazy(() => import('./components/Contact'))
-const Sushi = lazy(() => import('./components/Sushi'))
-const Home = lazy(() => import('./components/Home'))
+const Model = lazy(() => import('./components/model/Model'))
+const Maze = lazy(() => import('./components/pages/Maze'))
+const Contact = lazy(() => import('./components/pages/Contact'))
+const Sushi = lazy(() => import('./components/pages/Sushi'))
+const Home = lazy(() => import('./components/pages/Home'))
 
 
 const theme = createTheme({

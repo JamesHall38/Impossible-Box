@@ -1,10 +1,10 @@
 import { useRef, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
-import { default as BoxContentMeshes } from './shaders/BoxContent'
-import { default as EmissionMeshes } from './shaders/Emission'
+import { default as BoxContentMeshes } from '../shaders/BoxContent'
+import { default as EmissionMeshes } from '../shaders/Emission'
 import * as THREE from 'three'
-import './shaders/RainMaterial'
+import '../shaders/RainMaterial'
 
 
 const Rain = () => {

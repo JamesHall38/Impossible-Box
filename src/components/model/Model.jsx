@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { default as Controls } from './Controls'
 import { default as Cube } from './Cube'
-import useStyles from './styles'
+import useStyles from './../styles'
 
 
 

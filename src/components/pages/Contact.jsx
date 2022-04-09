@@ -1,7 +1,7 @@
 
 import React, { useRef, useState } from 'react'
 import { Typography, Card, CardContent } from '@material-ui/core'
-import useStyles from './styles'
+import useStyles from '../styles'
 import { motion } from "framer-motion"
 import { Button, Grid, TextField } from '@material-ui/core'
 import { useForm, FormProvider, useFormContext, Controller } from 'react-hook-form'
