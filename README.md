@@ -1,6 +1,6 @@
 # James Hall's Portfolio
 
-[--Click here to visit the website--](https://impossible-box.vercel.app/).
+[--Click here to visit the website--](https://impossible-box.vercel.app/)
 
 ## Available Scripts
 
@@ -18,6 +18,12 @@ You may also see any lint errors in the console.
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+---
+
+![portfolio](https://user-images.githubusercontent.com/95545311/162567337-41ca99e6-ebc4-40fc-a240-a853e0d85dfb.gif)
+
+---
 
 ## How it works
 
