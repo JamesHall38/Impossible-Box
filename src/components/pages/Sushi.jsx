@@ -8,8 +8,8 @@ const Sushi = () => {
 
     return (
         <>
-            <div style={{ padding: '10px' }}>
-                <Card className={classes.sushi} >
+            <div className={classes.container}>
+                <Card className={classes.responsiveCard} >
                     <CardContent>
 
                         <motion.div

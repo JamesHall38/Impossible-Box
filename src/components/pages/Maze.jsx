@@ -8,8 +8,8 @@ const Maze = () => {
     const classes = useStyles()
 
     return (
-        <div style={{ position: 'absolute', padding: '10px' }} >
-            <Card className={classes.maze} >
+        <div className={classes.container} >
+            <Card className={classes.responsiveCard} >
                 <CardContent>
                     <motion.div
                         initial={{ opacity: 0, translateY: 10 }}

@@ -3,12 +3,15 @@ import { Canvas } from '@react-three/fiber'
 import { default as Controls } from './Controls'
 import { default as Cube } from './Cube'
 import useStyles from './../styles'
+import polyfill from "@juggle/resize-observer"
+
 
 
 
 const Model = (props) => {
     const [rotate, setRotate] = useState(true)
     const classes = useStyles()
+
 
     // For mobile devices
     useEffect(() => {
@@ -27,7 +30,12 @@ const Model = (props) => {
             className={classes.canvas}
             style={{ position: 'absolute' }}
             flat
+            // onClick={() => { setRotate(false) }} touchStart={() => { setRotate(false) }}
+            // set the viewport window sizes
+            camera={{ fov: 40 }}
+            resize={{ polyfill }}
             dpr={2}>
+
 
             <group dispose={null} onClick={() => { setRotate(false) }} touchStart={() => { setRotate(false) }}>
 

@@ -6,35 +6,55 @@ import { useFrame } from '@react-three/fiber'
 const Controls = ({ navigate, location, path, rotate }) => {
     const controls = useRef()
 
+
+
+
     useEffect(() => {
         controls.current.autoRotate = rotate
     }, [rotate])
 
-    useEffect(() => {
-        if (path === '/Sushi')
-            controls.current.setAzimuthalAngle(Math.PI / 2)
-        else if (path === '/Maze')
-            controls.current.setAzimuthalAngle(Math.PI)
-        else if (path === '/Contact')
-            controls.current.setAzimuthalAngle(3 * Math.PI / 2)
-        else
-            controls.current.setAzimuthalAngle(0)
+    const controlsSettings = () => {
 
-        controls.current.autoRotate = false
-    }, [path])
-
-    useEffect(() => {
-        controls.current.maxDistance = 2
-        controls.current.minDistance = 1
-        controls.current.maxPolarAngle = 3.01 * Math.PI / 6
-        controls.current.minPolarAngle = 2.99 * Math.PI / 6
-        controls.current.autoRotate = true
+        controls.current.maxDistance = 3
+        controls.current.minDistance = 3
+        controls.current.maxPolarAngle = Math.PI / 2.25
+        controls.current.minPolarAngle = Math.PI / 2.25
         controls.current.autoRotateSpeed *= -1
+        // controls.current.autoRotate = true
+        controls.current.target.set(0, 0.2, 0)
+        controls.current.enablePan = false
+
+        if (window.innerWidth > 1.75 * window.innerHeight) {
+            controls.current.maxDistance = 2.3
+            controls.current.minDistance = 2.3
+            controls.current.maxPolarAngle = Math.PI / 2
+            controls.current.minPolarAngle = Math.PI / 2
+            controls.current.target.set(0, -0.05, 0)
+        }
+    }
+
+    useEffect(() => {
+        controlsSettings()
+        const handleResize = () => {
+            controlsSettings()
+        }
+        window.addEventListener("resize", handleResize);
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        }
     }, [])
 
     useFrame(({ camera }) => {
-        controls.current.target.set(0, (Math.sqrt((camera.position.x ** 2) + (camera.position.z ** 2)) - .8) * 0.48 - 0.24, 0)
         const angle = controls.current.getAzimuthalAngle()
+
+        if (window.innerWidth > 1.75 * window.innerHeight) {
+            if (camera.position.z <= 0)
+                camera.rotation.y += window.innerWidth / window.innerHeight / 7
+            else
+                camera.rotation.y -= window.innerWidth / window.innerHeight / 7
+        }
+
+
         if (angle > Math.PI / 4 && angle < 3 * Math.PI / 4) {
             if (location.pathname !== '/Sushi')
                 navigate('/Sushi')
@@ -51,7 +71,22 @@ const Controls = ({ navigate, location, path, rotate }) => {
             if (location.pathname !== '/')
                 navigate('/')
         }
+
     })
+
+    useEffect(() => {
+        if (path === '/Sushi')
+            controls.current.setAzimuthalAngle(Math.PI / 2)
+        else if (path === '/Maze')
+            controls.current.setAzimuthalAngle(Math.PI)
+        else if (path === '/Contact')
+            controls.current.setAzimuthalAngle(3 * Math.PI / 2)
+        else
+            controls.current.setAzimuthalAngle(0)
+
+        controls.current.autoRotate = false
+    }, [path])
+
     return (<>
         <OrbitControls ref={controls} />
         <AdaptiveDpr />

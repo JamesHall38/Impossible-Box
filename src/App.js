@@ -29,6 +29,9 @@ const Home = lazy(() => import('./components/pages/Home'))
 const theme = createTheme({
   overrides: {
     MuiInputBase: {
+      root: {
+        height: '50px',
+      },
       input: {
         color: 'white',
       },
@@ -62,9 +65,9 @@ const Main = () => {
   const [path, setPath] = useState('')
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', background: '#BC2020', height: '100vh' }}>
+    <div style={{ display: 'flex', background: '#BC2020' }}>
       <Navbar setPath={setPath} />
-      <CssBaseline />
+      {/* <CssBaseline /> */}
 
       <Suspense fallback={<div className={classes.load}></div>}>
         <Model navigate={navigate} location={location} path={path} />

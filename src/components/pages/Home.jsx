@@ -7,8 +7,8 @@ const Home = () => {
     const classes = useStyles()
 
     return (
-        <div style={{ padding: '10px' }}>
-            <Card className={classes.home} >
+        <div className={classes.container} >
+            <Card className={classes.responsiveCard} >
                 <CardContent >
                     <motion.div
                         initial={{ opacity: 0, translateY: 10 }}
@@ -28,7 +28,7 @@ const Home = () => {
                 </CardContent>
                 <CardContent >
                     <motion.div
-                        initial={{ opacity: 0, translateY: 10 }}
+                        initial={{ opacity: 1, translateY: 10 }}
                         animate={{ opacity: 1, translateY: 0 }}
                         exit={{ opacity: 0, translateY: 10 }}
                         transition={{ delay: 0.1, duration: 0.4 }}>

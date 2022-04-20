@@ -8,7 +8,7 @@ import { useForm, FormProvider, useFormContext, Controller } from 'react-hook-fo
 import emailjs from '@emailjs/browser'
 
 
-const FormInput = ({ name, label, required, value, onChange, multiline }) => {
+const FormInput = ({ name, label, required, value, onChange }) => {
     const { control } = useFormContext()
     return (
         <Controller
@@ -24,8 +24,6 @@ const FormInput = ({ name, label, required, value, onChange, multiline }) => {
                     }}
                     variant="filled"
                     size='small'
-                    rows={multiline ? 4 : 2}
-                    multiline
                     {...field}
                     value={value}
                     onChange={onChange}
@@ -66,8 +64,8 @@ const Contact = () => {
     }
 
     return (
-        <div style={{ position: 'absolute', padding: '10px' }} >
-            <Card className={classes.contact} >
+        <div className={classes.container} >
+            <Card className={classes.responsiveCard} >
                 <CardContent style={{ height: '50px' }} >
                     <motion.div
                         initial={{ opacity: 0, translateY: 10 }}
@@ -122,7 +120,7 @@ const Contact = () => {
                                         transition={{ delay: 0.2, duration: 0.4 }}
                                         style={{ width: '100%' }}>
 
-                                        <FormInput required value={messageFormContent} onChange={e => setMessageFormContent(e.target.value)} name="message" label="Message" multiline />
+                                        <FormInput required value={messageFormContent} onChange={e => setMessageFormContent(e.target.value)} name="message" label="Message" />
 
                                     </motion.div >
                                 </Grid>
