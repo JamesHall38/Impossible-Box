@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
-    "@juggle/resize-observer": "^3.3.1",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "@react-three/drei": "^8.16.7",
@@ -43,6 +42,7 @@
     ]
   },
   "devDependencies": {
-    "glslify": "^7.1.1"
+    "glslify": "^7.1.1",
+    "resize-observer-polyfill": "^1.5.1"
   }
 }
