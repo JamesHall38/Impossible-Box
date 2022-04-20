@@ -3,7 +3,7 @@ import { useTexture } from '@react-three/drei'
 
 
 const BoxContent = ({ face, faceName, nodes, screen }) => {
-    const texture = useTexture(`BackedFace${face}.avif`)
+    const texture = useTexture(`BackedFace${face}.jpg`)
     const screenTexture = useTexture(`Screen.jpg`)
 
     texture.flipY = false
