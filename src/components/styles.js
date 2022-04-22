@@ -46,6 +46,7 @@ export default makeStyles(() => ({
         position: 'absolute',
         left: 'calc(70vw - 200px)',
         width: '100%',
+        // height: '100%',
         height: '261px',
         color: 'white',
         top: 'calc(50vh - 135px)',
@@ -53,10 +54,8 @@ export default makeStyles(() => ({
         backdropFilter: 'blur(10px)',
         "@media (max-width: calc(1.75*100vh))": {
             top: '0',
-            // display:'inline-block',
             left: 'calc(50vw - 50% - 10px)',
             textAlign: 'center',
-            // maxWidth: '620px',
         },
     },
     suspense: {
@@ -65,6 +64,7 @@ export default makeStyles(() => ({
         left: 'calc(70vw - 200px)',
         borderRadius: '5px',
         width: '450px',
+        // height: '100%',
         height: '261px',
         top: 'calc(50vh - 135px)',
         background: 'rgb(32,32,35,0.5)',
@@ -109,13 +109,16 @@ export default makeStyles(() => ({
         },
     },
     canvas: {
-        // position: 'fixed',
+        position: 'absolute',
         background: '#BC2020',
-        // maxWidth: '50vw',
-        width: '100vw',
-        // height: '100vh',
         animationName: '$fadein',
         animationDuration: ' 1.0s',
+        minWidth: '150vw',
+        left: '-50vw',
+        "@media (max-width: calc(1.75*100vh))": {
+            minWidth: '100vw',
+            left: '0',
+        },
     },
     '@keyframes rotate': {
         from: {

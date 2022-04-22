@@ -6,30 +6,20 @@ import { useFrame } from '@react-three/fiber'
 const Controls = ({ navigate, location, path, rotate }) => {
     const controls = useRef()
 
-
-
-
-    useEffect(() => {
-        controls.current.autoRotate = rotate
-    }, [rotate])
-
     const controlsSettings = () => {
 
         controls.current.maxDistance = 3
         controls.current.minDistance = 3
-        controls.current.maxPolarAngle = Math.PI / 2.25
-        controls.current.minPolarAngle = Math.PI / 2.25
+        controls.current.maxPolarAngle = Math.PI / 2
+        controls.current.minPolarAngle = Math.PI / 2.5
         controls.current.autoRotateSpeed *= -1
-        // controls.current.autoRotate = true
         controls.current.target.set(0, 0.2, 0)
         controls.current.enablePan = false
 
         if (window.innerWidth > 1.75 * window.innerHeight) {
-            controls.current.maxDistance = 2.3
-            controls.current.minDistance = 2.3
-            controls.current.maxPolarAngle = Math.PI / 2
-            controls.current.minPolarAngle = Math.PI / 2
             controls.current.target.set(0, -0.05, 0)
+            controls.current.maxDistance = 2.5
+            controls.current.minDistance = 2.5
         }
     }
 
@@ -46,14 +36,6 @@ const Controls = ({ navigate, location, path, rotate }) => {
 
     useFrame(({ camera }) => {
         const angle = controls.current.getAzimuthalAngle()
-
-        if (window.innerWidth > 1.75 * window.innerHeight) {
-            if (camera.position.z <= 0)
-                camera.rotation.y += window.innerWidth / window.innerHeight / 7
-            else
-                camera.rotation.y -= window.innerWidth / window.innerHeight / 7
-        }
-
 
         if (angle > Math.PI / 4 && angle < 3 * Math.PI / 4) {
             if (location.pathname !== '/Sushi')
@@ -86,6 +68,10 @@ const Controls = ({ navigate, location, path, rotate }) => {
 
         controls.current.autoRotate = false
     }, [path])
+
+    useEffect(() => {
+        controls.current.autoRotate = rotate
+    }, [rotate])
 
     return (<>
         <OrbitControls ref={controls} />
