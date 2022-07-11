@@ -8,10 +8,10 @@ const Controls = ({ navigate, location, path, rotate }) => {
 
     const controlsSettings = () => {
 
-        controls.current.maxDistance = 4
-        controls.current.minDistance = 4
+        controls.current.maxDistance = 4.1
+        controls.current.minDistance = 4.1
         controls.current.maxPolarAngle = Math.PI / 2
-        controls.current.minPolarAngle = Math.PI / 2.5
+        controls.current.minPolarAngle = Math.PI / 2.2
         controls.current.autoRotateSpeed *= -1
         controls.current.target.set(0, 0.3, 0)
         controls.current.enablePan = false
